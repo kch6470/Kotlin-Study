@@ -1,6 +1,7 @@
 package com.example.textviewkt
 
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -28,6 +29,11 @@ class SubActivity : AppCompatActivity() {
             //바인딩된 TextViewGetMsg 의 텍스트를 "msg" 키값에 대응되는 string으로 바꾼다
             binding.TextViewGetMsg.text = intent.getStringExtra("msg")
         }
+        
+        val item = arrayOf("사과", "배", "키위", "하미과", "석류")
+        //binding.ListView.adapter = ArrayAdapter(this.)
+
+        
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
