@@ -31,9 +31,8 @@ class SubActivity : AppCompatActivity() {
         }
         
         val item = arrayOf("사과", "배", "키위", "하미과", "석류")
-        //binding.ListView.adapter = ArrayAdapter(this.)
-
-        
+        // context란 한 액티비티의 모든 정보를 담고있다.
+        binding.ListView.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, item)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
